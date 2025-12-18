@@ -1,3 +1,6 @@
+import React from 'react';
+
+// component Sidebar.tsx
 export interface NavItemProps {
   icon: React.ReactNode;
   label: string;
@@ -5,14 +8,18 @@ export interface NavItemProps {
   badge?: string;
 }
 
-export interface Message {
-  id: string;
-  sender: string;
-  email: string;
-  subject: string;
-  content: string;
-  time: string;
-  date: string;
-  avatar: string;
-  isUnread: boolean;
+// page Dashboard.tsx
+export interface StatCardProps {
+  title: string;
+  value: string;
+  change: string;
+  icon: React.ElementType;
+  color: string;
+}
+
+export interface DashboardData {
+  revenue: { value: string; change: string };
+  activeUsers: { value: string; change: string };
+  newOrders: { value: string; change: string };
+  growthRate: { value: string; change: string };
 }

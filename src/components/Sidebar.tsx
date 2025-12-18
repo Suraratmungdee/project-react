@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Search, Route, Users, UserCircle, Package, CreditCard, Inbox, FileText } from 'lucide-react';
+import { LayoutGrid, Search, Route, Users, UserCircle, Package, CreditCard, Inbox, FileText, House } from 'lucide-react';
 import type { NavItemProps } from '../types';
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label, to, badge }) => (
@@ -21,8 +21,8 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, to, badge }) => (
 export default function Sidebar() {
 
   const menuItems = [
-    { icon: LayoutDashboard, label: 'Dashboards', path: '/dashboard' },
-    { icon: Search, label: 'Discover', path: '/discover' },
+    { icon: LayoutGrid, label: 'Dashboards', path: '/dashboard' },
+    { icon: House, label: 'Discover', path: '/discover' },
     { icon: Route, label: 'Route', path: '/route' },
     { icon: Users, label: 'Service providers', path: '/services' },
     { icon: UserCircle, label: 'Account', path: '/account' },
@@ -33,10 +33,9 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-slate-200 flex flex-col p-4 shrink-0">
+    <aside className="w-64 flex flex-col p-4 shrink-0">
       <div className="flex items-center gap-2 px-2 mb-8 text-pink-500 font-bold text-xl">
-        {/* <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white text-xs">🌸</div> */}
-        <span className="text-slate-800">Adventure Earth</span>
+        <img src="/logo-adventure-earth.png" alt="logo" />
       </div>
       <nav className="flex-1 space-y-1">
         {menuItems.map((item) => (
