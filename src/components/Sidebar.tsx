@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutGrid, Search, Route, Users, UserCircle, Package, CreditCard, Inbox, FileText, House } from 'lucide-react';
+import { LayoutGrid, CirclePlus, Search, Route, Users, UserCircle, Package, CreditCard, Inbox, FileText, House } from 'lucide-react';
 import type { NavItemProps } from '../types';
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label, to, badge }) => (
@@ -22,14 +22,15 @@ export default function Sidebar() {
 
   const menuItems = [
     { icon: LayoutGrid, label: 'Dashboards', path: '/dashboard' },
-    { icon: House, label: 'Discover', path: '/discover' },
-    { icon: Route, label: 'Route', path: '/route' },
-    { icon: Users, label: 'Service providers', path: '/services' },
-    { icon: UserCircle, label: 'Account', path: '/account' },
-    { icon: Package, label: 'Products', path: '/products' },
-    { icon: CreditCard, label: 'Payment', path: '/payment', badge: "10" },
-    { icon: Inbox, label: 'Inbox', path: '/inbox', badge: "24" },
-    { icon: FileText, label: 'Reports', path: '/reports', badge: "5" },
+    { icon: CirclePlus, label: 'Pokemon', path: '/pokemon' },
+    // { icon: House, label: 'Discover', path: '/discover' },
+    // { icon: Route, label: 'Route', path: '/route' },
+    // { icon: Users, label: 'Service providers', path: '/services' },
+    // { icon: UserCircle, label: 'Account', path: '/account' },
+    // { icon: Package, label: 'Products', path: '/products' },
+    // { icon: CreditCard, label: 'Payment', path: '/payment', badge: "10" },
+    // { icon: Inbox, label: 'Inbox', path: '/inbox', badge: "24" },
+    // { icon: FileText, label: 'Reports', path: '/reports', badge: "5" },
   ];
 
   return (
@@ -44,7 +45,7 @@ export default function Sidebar() {
             icon={<item.icon size={20} />}
             label={item.label}
             to={item.path}
-            badge={item.badge}
+            // badge={item.badge}
           />
         ))}
       </nav>

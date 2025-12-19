@@ -5,6 +5,7 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Pokemon from './pages/Pokemon';
 import ComingSoon from './components/ComingSoon';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/pokemon" element={<Pokemon />} />
             <Route path="/discover" element={<ComingSoon />} />
             <Route path="/route" element={<ComingSoon />} />
             <Route path="/services" element={<ComingSoon />} />
